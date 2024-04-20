@@ -5,11 +5,8 @@ require("./mongoConnection");
 
 var app = express();
 const cors=require("cors");
-var corsOptions = {
-    origin: '*',
-    optionsSuccessStatus: 200,
-  }
-app.use(cors(corsOptions));
+
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
