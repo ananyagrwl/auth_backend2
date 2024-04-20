@@ -19,7 +19,7 @@ const sendMail = async (email, random) => {
         name: "Team Autho",
         address: email
       }, //sender address
-      to: ["ananya88agrawal@gmail.com"], // list of receivers
+      to: [email], // list of receivers
       subject: "OTP for Autho", // Subject line
       text: `OTP to login in the website ${random}`, // plain text body
       html:`<body>
