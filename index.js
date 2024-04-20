@@ -1,4 +1,5 @@
 var express = require('express');
+var app = express();
 const cors=require("cors");
 var corsOptions = {
     origin: '*',
@@ -10,7 +11,7 @@ var cookieParser = require('cookie-parser');
 require("./mongoConnection");
 
 var userRouter = require('./routes/users');
-var app = express();
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
