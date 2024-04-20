@@ -1,12 +1,17 @@
 var express = require('express');
 const cors=require("cors");
+var corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200,
+  }
+app.use(cors(corsOptions));
+
 var cookieParser = require('cookie-parser');
 require("./mongoConnection");
 
 var userRouter = require('./routes/users');
 var app = express();
 
-app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
